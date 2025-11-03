@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Articles</h1>
+
+{% if title %}
+<div class="card">
+    <h2>{{ title }}</h2>
+    <p><strong>Author:</strong> {{ author }}</p>
+    <p>{{ body }}</p>
+    {% if image_url %}
+        <img src="{{ image_url }}" alt="Article image" style="max-width: 400px; height: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}
