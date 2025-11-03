@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/e1115187-3d94-4349-b550-22d1f4eaba47/resourceGroups/cms-rg/providers/Microsoft.Web/sites/cms3",
+    "appService.deploySubpath": "."
+}

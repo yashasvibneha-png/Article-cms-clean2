@@ -5,8 +5,11 @@ import msal
 import os
 import uuid
 
+# Initialize Flask
 app = Flask(__name__)
 app.config.from_object(Config)
+
+
 
 # Azure Blob Setup
 blob_service_client = BlobServiceClient.from_connection_string(Config.AZURE_STORAGE_CONNECTION_STRING)
@@ -79,6 +82,10 @@ def create():
         return render_template("index.html", title=title, author=author, body=body, image_url=image_url)
 
     return render_template("create.html")
+
+
+# Azure expects a variable named 'application' for WSGI entry
+application = app
 
 if __name__ == "__main__":
     app.secret_key = os.urandom(24)

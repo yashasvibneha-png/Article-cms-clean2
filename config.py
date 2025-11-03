@@ -19,6 +19,6 @@ class Config:
     CLIENT_SECRET = os.getenv("CLIENT_SECRET")
     AUTHORITY = f"https://login.microsoftonline.com/{TENANT_ID}"
     SCOPE = ["User.Read"]
-    REDIRECT_URI = "http://localhost:5000/getAToken"
+    REDIRECT_URI = "https://cms3.azurewebsites.net/getAToken"
 
     SECRET_KEY = os.environ.get("SECRET_KEY", "supersecretkey")
